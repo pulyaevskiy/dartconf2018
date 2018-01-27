@@ -1,7 +1,7 @@
 import 'dart:async';
-import 'dart:convert';
 
 import 'package:node_io/node_io.dart';
+import 'package:dartconf2018/figlet.dart'; // NPM package bindings and require()
 
 Future main() async {
   final HttpServer server = await HttpServer.bind(host, port);
@@ -11,10 +11,8 @@ Future main() async {
   server.listen((HttpRequest request) async {
     try {
       print('${request.method} ${request.uri}');
-      request.response.headers.contentType = ContentType.JSON;
-      request.response.write(JSON.encode({
-        'requestedUri': '${request.uri}',
-      }));
+      request.response.headers.contentType = ContentType.TEXT;
+      request.response.write(figlet.textSync('DartConf 2018'));
     } finally {
       request.response.close();
     }
