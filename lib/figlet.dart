@@ -10,10 +10,5 @@ Figlet get figlet => require('figlet');
 @JS()
 @anonymous
 abstract class Figlet {
-  external String textSync(
-    String data, {
-    String font,
-    String horizontalLayout,
-    String verticalLayout,
-  });
+  external String textSync(String data, [options]);
 }
