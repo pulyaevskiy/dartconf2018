@@ -1,0 +1,17 @@
+name: dartconf2018
+description: Simple HTTP server demo
+version: 0.0.1
+author: Anatoly Pulyaevskiy <anatoly.pulyaevskiy@gmail.com>
+
+environment:
+  sdk: '>=1.20.1 <2.0.0'
+
+dependencies:
+  node_io:
+    git: git@github.com:pulyaevskiy/node-io.git
+  build_runner: ^0.7.8
+  build_web_compilers:
+    git: 
+      url: git@github.com:pulyaevskiy/build.git
+      path: build_web_compilers
+      ref: node-support
