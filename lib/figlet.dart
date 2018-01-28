@@ -3,7 +3,7 @@
 library dartconf2018.figlet;
 
 import 'package:js/js.dart';
-import 'package:node/node.dart';
+import 'package:node_interop/node.dart';
 
 Figlet get figlet => require('figlet');
 
